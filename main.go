@@ -6,7 +6,7 @@ import (
 	"github.com/jboursiquot/go-proverbs"
 )
 
-var Greeting = "Hello, Github is great!"
+var Greeting = "Hello, Github is great, but Ubuntu is best!"
 
 func main() {
 	fmt.Println(proverbs.Random())
