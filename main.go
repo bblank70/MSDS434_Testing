@@ -2,14 +2,16 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/jboursiquot/go-proverbs"
+	"net/http"
+	"time"
 )
 
-var Greeting = "Hello, Github is great, but Ubuntu is best!"
-
 func main() {
-	fmt.Println(proverbs.Random())
-	fmt.Println(Greeting)
+	http.HandleFunc("/", index)
+	fmt.Println("Now serving localhost: 8080")
+	http.ListenAndServe(":8080", nil)
+}
 
+func index(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, this is a web page! %s", time.Now())
 }
