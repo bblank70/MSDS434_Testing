@@ -13,5 +13,5 @@ func main() {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, this is a web page, and we can continuously deploy using the App Runner! %s", time.Now())
+	fmt.Fprintf(w, "Hello, we've made a commit and are going to see a GitHub Action! %s", time.Now())
 }
